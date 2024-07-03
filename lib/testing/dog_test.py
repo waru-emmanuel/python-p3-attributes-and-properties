@@ -28,7 +28,7 @@ class TestDog:
         Dog(name=123)
         sys.stdout = sys.__stdout__
         assert(captured_out.getvalue() == "Name must be string between 1 and 25 characters.\n")
-
+        
     def test_name_under_25(self):
         '''prints "Name must be string between 1 and 25 characters." if string over 25 characters.'''
         captured_out = io.StringIO()
